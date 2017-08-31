@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lin_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/d1pic"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_marginTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/splash"
+            android:tint="#f9f9f9"
+            android:src="@drawable/logo2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <ImageView
+            android:id="@+id/splash_arrow"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/splash"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
+            android:src="@drawable/d1shape"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/splash_arrow"
+            android:text="You Drive We Care"
+            android:textColor="#ffff"
+            android:gravity="center"/>
+
+</RelativeLayout>

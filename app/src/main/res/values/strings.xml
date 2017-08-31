@@ -19,6 +19,8 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="facebook_app_id">111568372871262</string>
+    <string name="fb_login_protocol_scheme">fb111568372871262</string>
     <string name="email">Email</string>
     <string name="password">password</string>
     <string name="remember_me">remember me</string>
@@ -29,4 +31,12 @@
     <string name="name">Full Name</string>
     <string name="register">Register</string>
     <string name="road_service_name">Road Assistance</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="test">Test</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

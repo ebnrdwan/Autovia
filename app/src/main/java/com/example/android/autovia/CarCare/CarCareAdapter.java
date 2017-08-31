@@ -1,4 +1,4 @@
-package com.example.android.autovia.RoadAssistance;
+package com.example.android.autovia.CarCare;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -19,13 +19,13 @@ import java.util.ArrayList;
 /**
  * Created by Abdulrhman on 22/02/2017.
  */
-public class RoadAssistAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class CarCareAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    ArrayList<RoadServiceModel> arrayList;
+    ArrayList<CarCareModel> arrayList;
     Context context;
 
 
-    public RoadAssistAdapter(Context context, ArrayList<RoadServiceModel> arrayList) {
+    public CarCareAdapter(Context context, ArrayList<CarCareModel> arrayList) {
         this.arrayList = arrayList;
         this.context = context;
 

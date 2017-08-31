@@ -1,7 +1,9 @@
-package com.example.android.autovia;
+package com.example.android.autovia.utility;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import com.example.android.autovia.R;
 
 
 /**

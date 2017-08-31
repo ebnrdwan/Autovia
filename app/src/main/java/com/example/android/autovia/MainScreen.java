@@ -15,8 +15,9 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.android.autovia.AccountSessions.LoginActivity;
+import com.example.android.autovia.RoadAssistance.RoadServicesActivity;
 
-public class MainActivity extends AppCompatActivity
+public class MainScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     @Override
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.profile_menu) {
 
         }  else if (id == R.id.signing) {
-            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            startActivity(new Intent(MainScreen.this, LoginActivity.class));
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity
         switch (id){
             case R.id.road_service_card:
                 Snackbar.make(findViewById(R.id.road_service_card),"you clicked on road service",Snackbar.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this,RoadServicesActivity.class));
+                startActivity(new Intent(MainScreen.this,RoadServicesActivity.class));
 
 
         }
