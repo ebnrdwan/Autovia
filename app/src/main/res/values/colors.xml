@@ -4,7 +4,11 @@
     <color name="colorPrimaryDark">#06466A</color>
     <color name="colorAccent">#95C11F</color>
     <color name="colorhint">#66000000</color>
-
+<color name="light_gray">#F2F2F3 </color>
+    <color name="dark_gray">#9DA4AD</color>
     <color name="black">@android:color/black</color>
     <color name="black_overlay">#66000000</color>
+    <color name="yellow">#f0bc2b</color>
+    <color name="green">#01b169</color>
+    <color name="red">#d80027</color>
 </resources>

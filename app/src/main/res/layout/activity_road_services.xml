@@ -1,25 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.flipboard.bottomsheet.BottomSheetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/bottomsheet"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.autovia.RoadAssistance.RoadServicesActivity">
+    tools:context=".RoadAssistance.RoadServicesActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <ebnrdwan.app.android.autovia.CustomViews.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/app_name" />
+
+    </android.support.v7.widget.Toolbar>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@color/black_overlay"
-        android:layout_height="match_parent">
-        <android.support.v7.widget.RecyclerView
-            android:layout_margin="8dp"
-            android:background="@android:color/transparent"
-            android:id="@+id/roadServieRecycler"
-            android:layout_alignParentBottom="true"
+        android:layout_height="match_parent"
+        android:background="@color/black_overlay">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/mapFrag"
+            android:name="com.google.android.gms.maps.MapFragment"
             android:layout_width="match_parent"
-            android:layout_height="100dp"></android.support.v7.widget.RecyclerView>
+            android:layout_height="match_parent"
+            map:cameraBearing="112.5"
+            map:cameraTargetLat="29.96975198"
+            map:cameraTargetLng="31.25094899"
+            map:cameraTilt="30"
+            map:cameraZoom="13" />
+
+        <com.arlib.floatingsearchview.FloatingSearchView
+            android:id="@+id/floating_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:floatingSearch_close_search_on_keyboard_dismiss="true"
+            app:floatingSearch_leftActionMode="showHamburger"
+            app:floatingSearch_searchBarMarginLeft="10dp"
+            app:floatingSearch_searchBarMarginRight="10dp"
+            app:floatingSearch_searchBarMarginTop="10dp"
+            app:floatingSearch_searchHint="Search..."
+            app:floatingSearch_showSearchKey="false"
+            app:floatingSearch_suggestionsListAnimDuration="250" />
+
+
+        <Button
+            android:layout_alignParentBottom="true"
+            android:layout_margin=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
 
 
-</com.flipboard.bottomsheet.BottomSheetLayout>
+</RelativeLayout>

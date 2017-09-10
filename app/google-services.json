@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "706641688769",
+    "firebase_url": "https://autovia-865e6.firebaseio.com",
+    "project_id": "autovia-865e6",
+    "storage_bucket": "autovia-865e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706641688769:android:8ce9c556aa357389",
+        "android_client_info": {
+          "package_name": "ebnrdwan.app.android.autovia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706641688769-u3ltu7u7s9int5lflpm1r4kf3s12h5uc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ebnrdwan.app.android.autovia",
+            "certificate_hash": "84fcb4bbcf962ac02ff6f7779aa9944c0022a904"
+          }
+        },
+        {
+          "client_id": "706641688769-vda9divs46v8vbrtuql37eru356b9kh6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv0dDOXuSek0AZDy1AVVOAWNnptOgOlvQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706641688769-vda9divs46v8vbrtuql37eru356b9kh6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -37,6 +37,17 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="test">Test</string>
 
+    <string name="firebase_api_key">AIzaSyBDXjj1edtpEc9JktFw8ddVPJYUMc8YwqA</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="road_service_label">Road Services</string>
+    <string name="alertTitle">Please grant me your location</string>
+    <string name="alertMessage">we need to access your location to be able to Request the service</string>
+    <string name="ok">Ok</string>
+    <string name="title_activity_requests_">Requests_Activity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_my_requests">MyRequests</string>
+    <string name="carCare_title">Car Care </string>
+    <string name="workshop_title">Workshop</string>
 </resources>
