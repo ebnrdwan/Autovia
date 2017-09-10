@@ -6,8 +6,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.flipboard.bottomsheet.BottomSheetLayout;
@@ -72,8 +72,7 @@ public class RoadAssistAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     class GenericViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView name;
-        TextView price;
-        Button activate;
+        LinearLayout wholeItem;
         ImageView picture;
         BottomSheetLayout bottomSheet;
         int positionadapter = getAdapterPosition();
@@ -84,11 +83,20 @@ public class RoadAssistAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
             name = (TextView) itemView.findViewById(R.id.servicename);
             picture = (ImageView) itemView.findViewById(R.id.serviceImage);
+            wholeItem = (LinearLayout) itemView.findViewById(R.id.whole_item);
         }
 
 
         @Override
         public void onClick(View v) {
+
+
+        }
+
+        private void colorSelectedItem(GenericViewHolder viewHolder){
+            
+
+
 
         }
     }

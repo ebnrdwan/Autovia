@@ -8,8 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
 
-import com.flipboard.bottomsheet.BottomSheetLayout;
-
 import java.util.ArrayList;
 
 import ebnrdwan.app.android.autovia.R;
@@ -30,7 +28,7 @@ public class WorkshopActivity extends AppCompatActivity  {
             @Override
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                 Toast.makeText(WorkshopActivity.this, "service Test of item " + position, Toast.LENGTH_SHORT).show();
-                BottomSheetLayout bottomSheet = (BottomSheetLayout) findViewById(R.id.bottomsheet);
+//                BottomSheetLayout bottomSheet = (BottomSheetLayout) findViewById(R.id.bottomsheet);
 //                bottomSheet.showWithSheetView(LayoutInflater.from(WorkshopActivity.this).inflate(R.layout.custom_view, bottomSheet, false));
                 Snackbar.make(findViewById(R.id.roadServieRecycler),"heey yeb",Snackbar.LENGTH_SHORT).show();
             }

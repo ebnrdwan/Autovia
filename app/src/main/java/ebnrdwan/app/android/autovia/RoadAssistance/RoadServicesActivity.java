@@ -40,7 +40,7 @@ import java.util.ArrayList;
 import ebnrdwan.app.android.autovia.R;
 import ebnrdwan.app.android.autovia.utility.ItemclickforRecycler;
 
-public class RoadServicesActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener, OnMapReadyCallback {
+public class RoadServicesActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener, OnMapReadyCallback, ItemclickforRecycler.OnItemClickListener {
     private static final int MY_PERMISSIONS_REQUEST_LOCATION = 100;
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 7172;
     private static final long UPDATE_INTERVAL = 1000;
@@ -58,14 +58,12 @@ public class RoadServicesActivity extends AppCompatActivity implements View.OnCl
     @Override
     protected void onResume() {
         super.onResume();
-
         if (isLocationPermitted()) {
             if (ContextCompat.checkSelfPermission(this,
                     android.Manifest.permission.ACCESS_FINE_LOCATION)
                     == PackageManager.PERMISSION_GRANTED) {
 
                 checkPlayServices();
-
             }
         }
 
@@ -85,30 +83,7 @@ public class RoadServicesActivity extends AppCompatActivity implements View.OnCl
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         rvRoad.setLayoutManager(linearLayoutManager);
-//        rvRoad.setLayoutManager(new GridLayoutManager(this, 2));
-        ItemclickforRecycler.addTo(rvRoad).setOnItemClickListener(new ItemclickforRecycler.OnItemClickListener() {
-            @Override
-            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-                Toast.makeText(RoadServicesActivity.this, "service Test of item " + position, Toast.LENGTH_SHORT).show();
-
-//                bottomSheet.showWithSheetView(LayoutInflater.from(WorkshopActivity.this).inflate(R.layout.custom_view, bottomSheet, false));
-
-                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                RoadRequestDialogF dialogF = new RoadRequestDialogF();
-//                dialogF.show(fragmentTransaction,"ALRT");
-                dialog = new Dialog(RoadServicesActivity.this);
-                dialog.setContentView(R.layout.road_dialog);
-                dialog.setTitle("Request A Service");
-                Button ok = (Button) dialog.findViewById(R.id.dialog_ok);
-                ok.setOnClickListener(RoadServicesActivity.this);
-                Button cancel = (Button) dialog.findViewById(R.id.dialog_cancel);
-                cancel.setOnClickListener(RoadServicesActivity.this);
-
-
-                dialog.show();
-                Snackbar.make(findViewById(R.id.roadServieRecycler), "heey yeb", Snackbar.LENGTH_SHORT).show();
-            }
-        });
+        ItemclickforRecycler.addTo(rvRoad).setOnItemClickListener(this);
 
         RoadAssistAdapter assistAdapter = new RoadAssistAdapter(this, getmodels());
         rvRoad.setAdapter(assistAdapter);
@@ -282,7 +257,7 @@ public class RoadServicesActivity extends AppCompatActivity implements View.OnCl
     protected void onStart() {
         super.onStart();
         if (!googleApiClient.isConnected())
-        googleApiClient.connect();
+            googleApiClient.connect();
     }
 
     @Override
@@ -291,5 +266,29 @@ public class RoadServicesActivity extends AppCompatActivity implements View.OnCl
         this.googleMap = googleMap;
 
     }
+
+    @Override
+    public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+        Toast.makeText(RoadServicesActivity.this, "service Test of item " + position, Toast.LENGTH_SHORT).show();
+
+//                bottomSheet.showWithSheetView(LayoutInflater.from(WorkshopActivity.this).inflate(R.layout.custom_view, bottomSheet, false));
+
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        RoadRequestDialogF dialogF = new RoadRequestDialogF();
+//                dialogF.show(fragmentTransaction,"ALRT");
+        dialog = new Dialog(RoadServicesActivity.this);
+        dialog.setContentView(R.layout.road_dialog);
+        dialog.setTitle("Request A Service");
+        Button ok = (Button) dialog.findViewById(R.id.dialog_ok);
+        ok.setOnClickListener(RoadServicesActivity.this);
+        Button cancel = (Button) dialog.findViewById(R.id.dialog_cancel);
+        cancel.setOnClickListener(RoadServicesActivity.this);
+
+
+        dialog.show();
+        Snackbar.make(findViewById(R.id.roadServieRecycler), "heey yeb", Snackbar.LENGTH_SHORT).show();
+    }
+
+
 }
 

@@ -15,10 +15,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 import ebnrdwan.app.android.autovia.AccountSessions.LoginActivity;
-import ebnrdwan.app.android.autovia.CarCare.CarCareActivity;
 import ebnrdwan.app.android.autovia.Requests.MyRequests;
 import ebnrdwan.app.android.autovia.RoadAssistance.RoadServicesActivity;
-import ebnrdwan.app.android.autovia.Workshop.WorkshopActivity;
 import ebnrdwan.app.android.autovia.info.About_activity;
 
 public class MainScreen extends AppCompatActivity
@@ -128,10 +126,10 @@ public class MainScreen extends AppCompatActivity
 
 
             case R.id.carcare_card:
-                startActivity(new Intent(MainScreen.this, CarCareActivity.class));
+//                startActivity(new Intent(MainScreen.this, CarCareActivity.class));
 
             case R.id.workshop_card:
-                startActivity(new Intent(MainScreen.this, WorkshopActivity.class));
+//                startActivity(new Intent(MainScreen.this, WorkshopActivity.class));
 
 
         }
