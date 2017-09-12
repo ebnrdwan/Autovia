@@ -50,4 +50,8 @@
     <string name="title_activity_my_requests">MyRequests</string>
     <string name="carCare_title">Car Care </string>
     <string name="workshop_title">Workshop</string>
+    <string name="choose_lang">Choose Language</string>
+    <string name="textappearance_value"></string>
+    <string name="btn_lang_ar">العربيه</string>
+    <string name="btn_lang_en">English</string>
 </resources>

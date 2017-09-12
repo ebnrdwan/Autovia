@@ -118,7 +118,7 @@ public class Care_Request_Adapter extends RecyclerView.Adapter<RecyclerView.View
                 case 1:
                     r_state_pending.setImageResource(R.drawable.success_pend);
                     r_state_accepted.setImageResource(R.drawable.req_go_drawable);
-                    request_state.setText("Request Pending");
+                    request_state.setText("Request Received");
 
 
                     break;
@@ -131,9 +131,9 @@ public class Care_Request_Adapter extends RecyclerView.Adapter<RecyclerView.View
 
                     break;
                 case 3:
-                    r_state_accepted.setBackground(context.getResources().getDrawable(R.drawable.req_rec_drawable));
-                    r_state_accepted.setImageResource(R.drawable.wrong);
-                    r_state_pending.setImageResource(R.drawable.req_pend_drawable);
+                    r_state_pending.setBackground(context.getResources().getDrawable(R.drawable.req_rec_drawable));
+                    r_state_pending.setImageResource(R.drawable.wrong);
+                    r_state_accepted.setImageResource(R.drawable.req_go_drawable);
                     request_info.setText(message);
                     request_info.setTextColor(context.getResources().getColor(R.color.red));
                     request_state.setText("Request Refused");

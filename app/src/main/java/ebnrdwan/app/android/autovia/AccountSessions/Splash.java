@@ -10,7 +10,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import ebnrdwan.app.android.autovia.MainScreen;
 import ebnrdwan.app.android.autovia.R;
 
 /**
@@ -92,7 +91,7 @@ public class Splash extends AppCompatActivity {
 
                     Intent intent = new Intent(Splash.this,
 
-                           MainScreen.class);
+                           ChooseLangActivity.class);
 
                     intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 

@@ -4,12 +4,12 @@ package ebnrdwan.app.android.autovia.Workshop;
  * Created by Abdulrhman on 16/08/2017.
  */
 
-public class WorkshopModel {
+public class CarCareModel {
     private String nameService;
     private int priceService;
     private String imageService;
 
-    public WorkshopModel(String nameService, int priceService, String imageService) {
+    public CarCareModel(String nameService, int priceService, String imageService) {
         this.nameService = nameService;
         this.priceService = priceService;
         this.imageService = imageService;

@@ -1,6 +1,7 @@
 package ebnrdwan.app.android.autovia.Requests.CarCareRequest;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,11 +13,13 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import ebnrdwan.app.android.autovia.R;
+import ebnrdwan.app.android.autovia.Requests.moreInfo.MoreInfoRequest;
+import ebnrdwan.app.android.autovia.utility.ItemclickforRecycler;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CarCare_RequestF extends Fragment {
+public class CarCare_RequestF extends Fragment implements ItemclickforRecycler.OnItemClickListener {
 
 
     public CarCare_RequestF() {
@@ -39,10 +42,15 @@ public class CarCare_RequestF extends Fragment {
 
        Care_Request_Adapter adapter = new Care_Request_Adapter(getContext(), list);
         recyclerRequest.setAdapter(adapter);
+        ItemclickforRecycler.addTo(recyclerRequest).setOnItemClickListener(this);
 
         return root;
 
 
     }
 
+    @Override
+    public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+        startActivity(new Intent(getActivity(), MoreInfoRequest.class));
+    }
 }

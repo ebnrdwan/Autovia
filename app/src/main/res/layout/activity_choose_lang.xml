@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pic2"
+    android:orientation="vertical"
+    tools:context="ebnrdwan.app.android.autovia.AccountSessions.ChooseLangActivity">
+
+    <ebnrdwan.app.android.autovia.CustomViews.MyTextView
+        android:id="@+id/choose_lang_ar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="اختار اللغه"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <ebnrdwan.app.android.autovia.CustomViews.MyTextView
+        android:id="@+id/choose_lang_en"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/choose_lang_ar"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/choose_lang"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <ebnrdwan.app.android.autovia.CustomViews.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:id="@+id/ar_button_lang"
+        android:text="@string/btn_lang_ar"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="31sp"
+        android:textStyle="bold"
+        android:layout_below="@id/choose_lang_en"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/roundedbtn"
+        android:textAppearance="?android:textAppearanceLarge" />
+
+    <ebnrdwan.app.android.autovia.CustomViews.MyTextView
+        android:layout_width="match_parent"
+        android:id="@+id/en_lang_btn"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_margin="16dp"
+        android:layout_below="@id/ar_button_lang"
+        android:layout_height="50dp"
+        android:text="@string/btn_lang_en"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="31sp"
+        android:textStyle="bold"
+        android:background="@drawable/roundedbtn" />
+
+
+</RelativeLayout>

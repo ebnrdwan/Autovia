@@ -40,7 +40,8 @@ import java.util.ArrayList;
 import ebnrdwan.app.android.autovia.R;
 import ebnrdwan.app.android.autovia.utility.ItemclickforRecycler;
 
-public class RoadServicesActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener, OnMapReadyCallback, ItemclickforRecycler.OnItemClickListener {
+public class RoadServicesActivity extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener
+        , LocationListener, OnMapReadyCallback, ItemclickforRecycler.OnItemClickListener {
     private static final int MY_PERMISSIONS_REQUEST_LOCATION = 100;
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 7172;
     private static final long UPDATE_INTERVAL = 1000;
@@ -54,6 +55,7 @@ public class RoadServicesActivity extends AppCompatActivity implements View.OnCl
     GoogleMap googleMap;
     FragmentManager fm = getSupportFragmentManager();
     Dialog dialog;
+
 
     @Override
     protected void onResume() {
@@ -83,7 +85,7 @@ public class RoadServicesActivity extends AppCompatActivity implements View.OnCl
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         rvRoad.setLayoutManager(linearLayoutManager);
-        ItemclickforRecycler.addTo(rvRoad).setOnItemClickListener(this);
+//        ItemclickforRecycler.addTo(rvRoad).setOnItemClickListener(this);
 
         RoadAssistAdapter assistAdapter = new RoadAssistAdapter(this, getmodels());
         rvRoad.setAdapter(assistAdapter);

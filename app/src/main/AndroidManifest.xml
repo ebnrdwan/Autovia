@@ -52,13 +52,7 @@
         <activity
             android:name=".MainScreen"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".AccountSessions.LoginActivity"
             android:label="@string/title_activity_login" />
@@ -67,23 +61,33 @@
             android:name=".RoadAssistance.RoadServicesActivity"
             android:label="@string/road_service_label"
             android:parentActivityName=".MainScreen"
-            android:theme="@style/ActivityThem"></activity>
+            android:theme="@style/ActivityThem" />
         <activity
             android:name=".AccountSessions.Splash"
-            android:configChanges="orientation|keyboardHidden|screenSize" />
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".info.About_activity" />
         <activity
             android:name=".Requests.MyRequests"
             android:label="@string/title_activity_my_requests"
-            android:theme="@style/AppTheme"></activity>
+            android:parentActivityName=".MainScreen"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".CarCare.CarCareActivity"
             android:label="@string/carCare_title"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Workshop.WorkshopActivity" />
+        <activity android:name=".AccountSessions.ChooseLangActivity" />
+
         <activity
-            android:name=".Workshop.WorkshopActivity"
-            android:label="@string/workshop_title"
-            android:theme="@style/AppTheme"></activity>
+            android:name=".Requests.moreInfo.MoreInfoRequest"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"
+           ></activity>
     </application>
 
 </manifest>

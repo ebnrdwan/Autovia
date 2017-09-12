@@ -1,6 +1,7 @@
 package ebnrdwan.app.android.autovia.Requests.Road_Request;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,8 +13,10 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import ebnrdwan.app.android.autovia.R;
+import ebnrdwan.app.android.autovia.Requests.moreInfo.MoreInfoRequest;
+import ebnrdwan.app.android.autovia.utility.ItemclickforRecycler;
 
-public class Road_RequestF extends Fragment {
+public class Road_RequestF extends Fragment implements ItemclickforRecycler.OnItemClickListener {
     Road_Request_Adapter adapter;
     RecyclerView recyclerRequest;
 
@@ -39,9 +42,16 @@ public class Road_RequestF extends Fragment {
         list.add(new Road_Request_Model("33", "Urgent", "20-10-2017", 4));
       adapter = new Road_Request_Adapter(getContext(), list);
         recyclerRequest.setAdapter(adapter);
+        ItemclickforRecycler.addTo(recyclerRequest).setOnItemClickListener(this);
+
+
 
         return root;
     }
 
 
+    @Override
+    public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+        startActivity(new Intent(getActivity(), MoreInfoRequest.class));
+    }
 }
