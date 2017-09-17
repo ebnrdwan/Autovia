@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:orientation="vertical">
 
+    <ebnrdwan.app.android.autovia.CustomViews.MyTextView
+        android:layout_margin="16dp"
+        android:text="Are We Good Enough for you ? "
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/yellow"
+        android:layout_height="0dp"
+        android:layout_weight=".3" />
+
+    <RatingBar
+        android:layout_marginRight="32dp"
+        android:layout_marginLeft="32dp"
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:numStars="5"
+        android:layout_gravity="center"
+        android:theme="@style/RatingBar"
+        android:rating="3"
+        android:stepSize="1.0" />
+
+    <EditText
+        android:hint=" leave your comment here.."
+        android:layout_margin="4dp"
+        android:background="@drawable/borderblack"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/rate_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/roundedbtnyellow"
+        android:text="Send"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
 </LinearLayout>

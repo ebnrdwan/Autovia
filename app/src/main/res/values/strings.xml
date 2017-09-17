@@ -54,4 +54,5 @@
     <string name="textappearance_value"></string>
     <string name="btn_lang_ar">العربيه</string>
     <string name="btn_lang_en">English</string>
+    <string name="phone">Phone Number</string>
 </resources>

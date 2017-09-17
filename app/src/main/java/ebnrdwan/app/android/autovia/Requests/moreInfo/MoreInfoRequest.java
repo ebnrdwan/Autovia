@@ -26,14 +26,8 @@ public class MoreInfoRequest extends AppCompatActivity implements View.OnClickLi
         switch (v.getId()) {
             case R.id.rate_button:
                 Dialog dialog = new Dialog(MoreInfoRequest.this);
-                dialog.setContentView(R.layout.road_dialog);
+                dialog.setContentView(R.layout.rating_layout);
                 dialog.setTitle("Request A Service");
-                Button ok = (Button) dialog.findViewById(R.id.dialog_ok);
-                ok.setOnClickListener(MoreInfoRequest.this);
-                Button cancel = (Button) dialog.findViewById(R.id.dialog_cancel);
-                cancel.setOnClickListener(MoreInfoRequest.this);
-
-
                 dialog.show();
                 break;
         }

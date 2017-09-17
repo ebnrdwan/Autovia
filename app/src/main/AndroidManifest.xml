@@ -11,6 +11,11 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.network" android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"  />
 
     <application
         android:allowBackup="true"
@@ -19,6 +24,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -56,7 +62,7 @@
         <activity
             android:name=".AccountSessions.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".AccountSessions.RegisterActivity" />
+        <activity android:name=".AccountSessions.Register.RegisterActivity" />
         <activity
             android:name=".RoadAssistance.RoadServicesActivity"
             android:label="@string/road_service_label"
@@ -86,7 +92,6 @@
 
         <activity
             android:name=".Requests.moreInfo.MoreInfoRequest"
-            android:theme="@style/Theme.AppCompat.Light.Dialog"
            ></activity>
     </application>
 

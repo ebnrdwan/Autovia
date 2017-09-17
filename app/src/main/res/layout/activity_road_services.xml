@@ -23,7 +23,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black_overlay">
+        android:background="@color/black_overlay"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <fragment xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/mapFrag"
@@ -71,6 +74,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/road_request_btn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
@@ -92,7 +96,7 @@
                     android:gravity="center"
                     android:textColor="@color/dark_gray"
                     android:textStyle="bold"
-                    tools:text="Time" />
+                    android:text="Time" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -100,7 +104,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    tools:text="20 min" />
+                    android:text="20 min" />
 
             </LinearLayout>
 
@@ -123,7 +127,7 @@
                     android:gravity="center"
                     android:textColor="@color/dark_gray"
                     android:textStyle="bold"
-                    tools:text="Price" />
+                   android:text="Price" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -131,7 +135,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    tools:text="100 EGP" />
+                    android:text="100 EGP" />
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>

@@ -124,6 +124,7 @@
                         android:textStyle="bold" />
 
                     <ebnrdwan.app.android.autovia.CustomViews.MyTextView
+                        android:id="@+id/myTextView"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"

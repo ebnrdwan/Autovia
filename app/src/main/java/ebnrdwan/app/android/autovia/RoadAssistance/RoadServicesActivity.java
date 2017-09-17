@@ -55,7 +55,9 @@ public class RoadServicesActivity extends AppCompatActivity implements View.OnCl
     GoogleMap googleMap;
     FragmentManager fm = getSupportFragmentManager();
     Dialog dialog;
-
+Button request ;
+    Button ok;
+    Button cancel ;
 
     @Override
     protected void onResume() {
@@ -89,8 +91,6 @@ public class RoadServicesActivity extends AppCompatActivity implements View.OnCl
 
         RoadAssistAdapter assistAdapter = new RoadAssistAdapter(this, getmodels());
         rvRoad.setAdapter(assistAdapter);
-
-
     }
 
     // initialize your Api Component
@@ -101,8 +101,6 @@ public class RoadServicesActivity extends AppCompatActivity implements View.OnCl
                 .addApi(LocationServices.API).build();
         //Fix first time run app if permission doesn't grant yet so can't get anything
         googleApiClient.connect();
-
-
     }
 
     // Initialize Location Request
@@ -116,9 +114,17 @@ public class RoadServicesActivity extends AppCompatActivity implements View.OnCl
 
 
     private void initializeViews() {
+        request = (Button) findViewById(R.id.road_request_btn);
+        request.setOnClickListener(this);
         mapfragment = (MapFragment) getFragmentManager().findFragmentById(R.id.mapFrag);
         mapfragment.getMapAsync(this);
         searchView = (FloatingSearchView) findViewById(R.id.floating_search_view);
+        dialog = new Dialog(RoadServicesActivity.this);
+        dialog.setContentView(R.layout.road_dialog);
+        ok = (Button) dialog.findViewById(R.id.dialog_ok);
+        cancel = (Button) dialog.findViewById(R.id.dialog_cancel);
+        ok.setOnClickListener(RoadServicesActivity.this);
+        cancel.setOnClickListener(RoadServicesActivity.this);
         searchView.setOnQueryChangeListener(new FloatingSearchView.OnQueryChangeListener() {
             @Override
             public void onSearchTextChanged(String oldQuery, final String newQuery) {
@@ -201,11 +207,16 @@ public class RoadServicesActivity extends AppCompatActivity implements View.OnCl
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
-            case R.id.dialog_ok:
+            case R.id.road_request_btn:
 
+                dialog.setTitle("Request A Service");
+                dialog.show();
                 break;
             case R.id.dialog_cancel:
                 dialog.dismiss();
+                break;
+            case R.id.dialog_ok:
+                break;
         }
     }
 
@@ -278,16 +289,7 @@ public class RoadServicesActivity extends AppCompatActivity implements View.OnCl
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         RoadRequestDialogF dialogF = new RoadRequestDialogF();
 //                dialogF.show(fragmentTransaction,"ALRT");
-        dialog = new Dialog(RoadServicesActivity.this);
-        dialog.setContentView(R.layout.road_dialog);
-        dialog.setTitle("Request A Service");
-        Button ok = (Button) dialog.findViewById(R.id.dialog_ok);
-        ok.setOnClickListener(RoadServicesActivity.this);
-        Button cancel = (Button) dialog.findViewById(R.id.dialog_cancel);
-        cancel.setOnClickListener(RoadServicesActivity.this);
 
-
-        dialog.show();
         Snackbar.make(findViewById(R.id.roadServieRecycler), "heey yeb", Snackbar.LENGTH_SHORT).show();
     }
 

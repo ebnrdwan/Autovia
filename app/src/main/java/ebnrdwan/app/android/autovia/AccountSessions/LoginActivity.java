@@ -34,6 +34,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 import java.util.Arrays;
 
+import ebnrdwan.app.android.autovia.AccountSessions.Register.RegisterActivity;
 import ebnrdwan.app.android.autovia.CustomViews.MyEditText;
 import ebnrdwan.app.android.autovia.CustomViews.MyTextView;
 import ebnrdwan.app.android.autovia.MainScreen;
@@ -105,15 +106,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 } else {
                     // Google Sign In failed, update UI appropriately
-                    // ...
+
                 }
         }
 
 
     }
-
-
-
 
 
     @Override
@@ -135,7 +133,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 break;
             case R.id.create_account:
-
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
                 break;
             case R.id.emailInput:
 
@@ -147,11 +145,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
 
-
-
-
     //initialize Views
     private void initializeViews() {
+
         login = (MyTextView) findViewById(R.id.signin1);
         login.setOnClickListener(this);
         facebookLogin = (ImageView) findViewById(R.id.facebook_icon);
@@ -229,7 +225,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             // Sign in success, update UI with the signed-in user's information
 //                            Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(LoginActivity.this, "wow success authentication mr."+user.getDisplayName(),
+                            Toast.makeText(LoginActivity.this, "wow success authentication mr." + user.getDisplayName(),
                                     Toast.LENGTH_SHORT).show();
 
                             startActivity(new Intent(LoginActivity.this, MainScreen.class));
